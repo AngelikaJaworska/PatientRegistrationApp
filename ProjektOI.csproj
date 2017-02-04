@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E15AA09-93BB-4D52-8F17-F2124E837E2F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjektOI</RootNamespace>
+    <AssemblyName>ProjektOI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SqlServerCe, Version=9.0.242.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft SQL Server Compact Edition\v4.0\Desktop\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DoctorEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorEditForm.Designer.cs">
+      <DependentUpon>DoctorEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgzaminationAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgzaminationAddForm.Designer.cs">
+      <DependentUpon>EgzaminationAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDatabase.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicDatabase.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDatabase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClinicDatabase.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ClinicDatabase.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteEgzaminationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteEgzaminationForm.Designer.cs">
+      <DependentUpon>DeleteEgzaminationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorAddForm.Designer.cs">
+      <DependentUpon>DoctorAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgzaminationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgzaminationEditForm.Designer.cs">
+      <DependentUpon>EgzaminationEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EgzaminationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EgzaminationForm.Designer.cs">
+      <DependentUpon>EgzaminationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DailyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DailyForm.Designer.cs">
+      <DependentUpon>DailyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PatientAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientAddForm.Designer.cs">
+      <DependentUpon>PatientAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientEditForm.Designer.cs">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PatientInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PatientInfoForm.Designer.cs">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Receptionist.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specialisation.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Visit.cs">
+      <DependentUpon>ClinicDatabase.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DoctorEditForm.resx">
+      <DependentUpon>DoctorEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgzaminationAddForm.resx">
+      <DependentUpon>EgzaminationAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteEgzaminationForm.resx">
+      <DependentUpon>DeleteEgzaminationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorAddForm.resx">
+      <DependentUpon>DoctorAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgzaminationEditForm.resx">
+      <DependentUpon>EgzaminationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EgzaminationForm.resx">
+      <DependentUpon>EgzaminationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DailyForm.resx">
+      <DependentUpon>DailyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientAddForm.resx">
+      <DependentUpon>PatientAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientEditForm.resx">
+      <DependentUpon>PatientEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientInfoForm.resx">
+      <DependentUpon>PatientInfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="ClinicDatabase.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ClinicDatabase.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClinicDatabase.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicDatabase.edmx</DependentUpon>
+      <LastGenOutput>ClinicDatabase.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ClinicDatabase.edmx.diagram">
+      <DependentUpon>ClinicDatabase.edmx</DependentUpon>
+    </None>
+    <None Include="ClinicDatabase.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ClinicDatabase.edmx</DependentUpon>
+      <LastGenOutput>ClinicDatabase.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Przechwytywanie.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e5b59c565757456497fbacefbbb4b97f" Name="Diagram1">
+        <EntityTypeShape EntityType="ClinicModel.Doctor" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Patient" Width="1.5" PointX="1.25" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Receptionist" Width="1.5" PointX="7.25" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Specialisation" Width="1.5" PointX="0.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.sysdiagram" Width="1.5" PointX="7.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ClinicModel.Visit" Width="1.5" PointX="5.125" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="ClinicModel.FK_Doctor_Specialisation" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_DoctorPatient_Doctor" ManuallyRouted="false" />
+        <AssociationConnector Association="ClinicModel.FK_DoctorPatient_Patient" ManuallyRouted="false" >
+        </AssociationConnector>
+        <AssociationConnector Association="ClinicModel.FK_Visits_Receptionist" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
